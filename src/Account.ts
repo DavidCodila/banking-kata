@@ -5,13 +5,14 @@ export class Account {
   construstor() {}
   deposit(amountToDeposit: number): void {
     this.balance += amountToDeposit;
-    this.date = String(new Date()).split(" ", 4).join(" ");
+    this.date = getDate();
     this.events.push(
       this.date + " \t " + "+" + amountToDeposit + " \t\t " + this.balance
     );
   }
   withdraw(amountToWithdraw: number): void {
     this.balance -= amountToWithdraw;
+    this.date = getDate();
     this.events.push(
       this.date + " \t " + "-" + amountToWithdraw + " \t\t " + this.balance
     );
@@ -21,4 +22,8 @@ export class Account {
     console.log(statement);
     return String(statement);
   }
+}
+
+function getDate(): string {
+  return String(new Date()).split(" ", 4).join(" ");
 }

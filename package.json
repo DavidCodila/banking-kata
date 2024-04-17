@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "start": "bun run src/index.ts",
-    "test": "bun --watch test __tests__/index.test.ts"
+    "test": "bun --watch test __tests__/Account.test.ts"
   },
   "devDependencies": {
     "@types/bun": "^1.1.0"

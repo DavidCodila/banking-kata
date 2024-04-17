@@ -1,9 +1,9 @@
 export class Account {
-  public balance: number;
-  construstor() {
-    this.balance = 0;
+  public balance = 0;
+  construstor() {}
+  deposit(amountToDeposit: number): void {
+    this.balance += amountToDeposit;
   }
-  deposit(amountToDeposit: number): void {}
   withdraw(amountToWithdraw: number): void {}
   printStatement(): String {
     return "";

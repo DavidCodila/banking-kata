@@ -4,7 +4,9 @@ export class Account {
   deposit(amountToDeposit: number): void {
     this.balance += amountToDeposit;
   }
-  withdraw(amountToWithdraw: number): void {}
+  withdraw(amountToWithdraw: number): void {
+    this.balance -= amountToWithdraw;
+  }
   printStatement(): String {
     return "";
   }

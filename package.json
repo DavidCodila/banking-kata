@@ -2,10 +2,18 @@
   "name": "banking-kata",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "test": "bun --watch test __tests__/index.test.ts"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "^1.1.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "coverage": "^0.4.1",
+    "ts-jest": "^29.1.2"
   }
 }

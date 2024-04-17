@@ -12,3 +12,9 @@ test("Test withdraw method", () => {
   account.withdraw(100);
   expect(account.balance).toEqual(400);
 });
+
+test("Test print statements method", () => {
+  expect(account.printStatement()).toEqual(
+    "Date \t\t Amount \t Balance \n17.4.2024 \t +500 \t\t 500 \n16.4.2024 \t -100 \t\t 400"
+  );
+});
